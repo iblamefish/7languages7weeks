@@ -44,8 +44,8 @@ Amendments to ***this*** repository will be made by
 
 --add your info below instead of mine--
 
-* [@plagelao](http://twitter.com/plagelao) also known as
-* [plagelao on GitHub](http://github.com/plagelao).
+* [@iblamefish](http://twitter.com/iblamefish) also known as
+* [slightlymore on GitHub](http://github.com/slightlymore).
 
 --add your info above instead of mine--
 
