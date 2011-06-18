@@ -14,6 +14,14 @@ puts "Hello, Ruby".index "Ruby"
 
 puts "Clinton " * 10
 
+# alternatively:
+i = 0
+while (i < 10)
+	puts "Clinton "
+	i = i + 1
+end
+
+
 
 # Print the string "This is sentence number 1," where the number 1 changes from 1 to 10.
 
