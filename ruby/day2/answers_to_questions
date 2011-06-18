@@ -1,0 +1,90 @@
+Find out how to access files with and without code blocks.
+What is the benefit of the code block?
+----------------------------------------------------------
+
+# without blocks
+
+file = File.new ('file.txt', 'r')
+while (line = file.gets)
+	puts "#{line}"
+end
+file.close
+
+
+
+
+# with a block
+
+File.open ('file.txt', 'r') do |file|
+  while (line = file.gets)
+    puts "#{line}"
+  end
+end
+
+
+The advantage of using a block is that you don't need to 
+remember to close the file - it will be closed automatically
+after the block.
+
+The code also is much more descriptive when using the block,
+and this is one of the elegant things about Ruby, and is 
+why a lot of people say that it makes them happy about coding
+again.
+
+In short, using the block means that the code makes 'more
+sense', takes care of the boring parts of programming (closing
+the file) and is much easier to reason about. 
+
+
+
+
+How would you translate a hash to an array? Can you translate
+arrays to hashes?
+-------------------------------------------------------------
+
+{:zero=>0, :one=>1, :two=>2}.to_a
+
+There is no native method to convert an array to a hash, but
+one could be written:
+
+a = [1,2,3,4]
+h = {}
+i = 0
+
+a.each do | item |
+  h[i] = item
+  i = i + 1
+end
+
+
+# or to add it to the Array class
+
+Class Array
+  def to_h
+    h = {}
+    i = 0
+    self.each do | item |
+      h[i] = item
+      i = i + 1
+    end
+    h
+  end
+end
+
+
+Can you iterate through a hash?
+--------------------------------------------------------------
+
+hash = { :name => 'clinton', :age => 27}
+
+hash.each do | key, value |
+  puts "#{key} => #{value}"
+end
+
+
+
+You can use Ruby arrays as stacks. What other common data
+structures do arrays support?
+--------------------------------------------------------------
+
+Queues
